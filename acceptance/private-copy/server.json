@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lightnow-ai/claim-mcp-stdio-public-private-copy",
+  "title": "LightNow public stdio private-copy fixture",
+  "description": "Minimal public stdio MCP server for the private-copy publisher acceptance journey.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/lightnow-ai/claim-mcp-stdio-public",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "harbor.apitree.net/lightnow-ai/claim-mcp-stdio-public@sha256:48f0587498dd87fe7b4dba58c65a9da99835b83ad6eff11d7af3e31a66d03446",
+      "transport": {
+        "type": "stdio"
+      },
+      "registryBaseUrl": "https://harbor.apitree.net",
+      "version": "0.1.0"
+    }
+  ],
+  "icons": [
+    {
+      "src": "https://github.com/lightnow-ai.png",
+      "mimeType": "image/png"
+    }
+  ]
+}
