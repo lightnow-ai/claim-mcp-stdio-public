@@ -3,7 +3,7 @@
   "name": "io.github.lightnow-ai/claim-mcp-stdio-public-private-copy",
   "title": "LightNow public stdio private-copy fixture",
   "description": "Minimal public stdio MCP server for the private-copy publisher acceptance journey.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "url": "https://github.com/lightnow-ai/claim-mcp-stdio-public",
     "source": "github"
