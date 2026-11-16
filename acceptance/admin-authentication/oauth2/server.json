@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lightnow-ai/claim-mcp-stdio-admin-auth-oauth2",
+  "title": "LightNow Admin STDIO auth acceptance: oauth2",
+  "description": "Operator-owned local STDIO startup authentication fixture exposing identify.",
+  "version": "0.1.1",
+  "repository": {
+    "url": "https://github.com/lightnow-ai/claim-mcp-stdio",
+    "source": "github",
+    "subfolder": "acceptance/admin-authentication/oauth2"
+  },
+  "packages": [
+    {
+      "registryType": "oci",
+      "registryBaseUrl": "https://harbor.apitree.net",
+      "identifier": "harbor.apitree.net/lightnow-ai/claim-mcp-stdio@sha256:bb53c78c4424b26eb0456841604e1c14577003769448d02f2a8aae3dc47b61d1",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CLAIM_OAUTH2_TOKEN",
+          "description": "Required OAuth 2.0 access token for startup access to the upstream acceptance service.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "named",
+          "name": "--auth-mode",
+          "value": "oauth2",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "type": "named",
+          "name": "--provider-config",
+          "value": "/app/auth-provider.json",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "filepath",
+          "description": "Server-owned public verification configuration shipped read-only in this immutable OCI image."
+        }
+      ]
+    }
+  ]
+}

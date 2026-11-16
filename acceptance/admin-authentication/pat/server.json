@@ -1,0 +1,49 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lightnow-ai/claim-mcp-stdio-admin-auth-pat",
+  "title": "LightNow Admin STDIO auth acceptance: pat",
+  "description": "Operator-owned local STDIO startup authentication fixture exposing identify.",
+  "version": "0.1.1",
+  "repository": {
+    "url": "https://github.com/lightnow-ai/claim-mcp-stdio",
+    "source": "github",
+    "subfolder": "acceptance/admin-authentication/pat"
+  },
+  "packages": [
+    {
+      "registryType": "oci",
+      "registryBaseUrl": "https://harbor.apitree.net",
+      "identifier": "harbor.apitree.net/lightnow-ai/claim-mcp-stdio@sha256:bb53c78c4424b26eb0456841604e1c14577003769448d02f2a8aae3dc47b61d1",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CLAIM_PERSONAL_ACCESS_TOKEN",
+          "description": "Required personal access token issued by this fixture for its acceptance principal.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ],
+      "packageArguments": [
+        {
+          "type": "named",
+          "name": "--auth-mode",
+          "value": "pat",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "type": "named",
+          "name": "--provider-config",
+          "value": "/app/auth-provider.json",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "filepath",
+          "description": "Server-owned public verification configuration shipped read-only in this immutable OCI image."
+        }
+      ]
+    }
+  ]
+}
