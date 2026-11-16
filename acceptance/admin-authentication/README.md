@@ -33,10 +33,14 @@ https://github.com/lightnow-ai/claim-mcp-stdio-public/tree/<ref>/acceptance/admi
 
 These definitions preload no credentials, capabilities, authentication results
 or admission exceptions. The private fixture's direct protocol checks retain all
-four complete lists, hash
-`04b8700c95fd7967f94de07cead506d363858bbbe8b27a58bf09718369571119`;
-this is not evidence of completed Admin configuration, storage or UI acceptance.
-Those native journeys must be verified separately.
+four complete SDK result objects, including their outer result fields, with hash
+`04b8700c95fd7967f94de07cead506d363858bbbe8b27a58bf09718369571119`.
+Applying the existing Probe/Orchestrator serializers yields the complete
+event/storage list hash
+`8ceb68b9ef2e7dd02e7c27c4a4fdde5fee2ed4d5e01bd2582a7ff9469fb4713d`.
+Both comparisons preserve all item fields under the existing contracts. These
+checks do not establish completed Admin configuration, storage or UI acceptance;
+those native journeys must be verified separately.
 
 ## Definition integrity
 
